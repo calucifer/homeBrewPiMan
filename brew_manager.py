@@ -24,7 +24,7 @@ def main(log_file):
             plug.switch_status("off")
             print("Turned the plug off")
     print("Plug status: ", plug_is_on, "Current_temp: ", current_temp)
-    data_line = "Temp at time " + current_time + " is: " + str(current_temp()) + "\n"
+    data_line = "Temp at time " + current_time + " is: " + str(current_temp) + "\n"
 
     if log_file:
         with open(log_file, 'a') as f:
