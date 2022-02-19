@@ -5,26 +5,26 @@ from teckin_plug import manage_plug as plug
 from temperature import checker as temp
 
 low_temp = 21.00
-high_temp = 23.00
+high_temp = 22.00
 
 
 def main(log_file):
-    current_time = time.asctime(time.localtime(time.time()))
+    current_time = time.strftime('%d/%m/%Y %H:%M')
     current_temp = temp.read_temp()
-    plug_is_on = plug.running_state()
-
+#    plug_is_on = plug.running_state()
+    plug_is_on = False
     if float(current_temp) < low_temp:
         print("Brrr ... it's cold, is the plug currently Running? ", plug_is_on)
-        if not plug_is_on:
-            plug.switch_status("on")
-            print("Turned the plug on")
+#        if not plug_is_on:
+#           plug.switch_status("on")
+#            print("Turned the plug on")
     elif float(current_temp) > high_temp:
         print("Ouch, its getting warm, is the plug on? ", plug_is_on)
-        if plug_is_on:
-            plug.switch_status("off")
-            print("Turned the plug off")
+#        if plug_is_on:
+#            plug.switch_status("off")
+#            print("Turned the plug off")
     print("Plug status: ", plug_is_on, "Current_temp: ", current_temp)
-    data_line = "Temp at time " + current_time + " is: " + str(current_temp) + "\n"
+    data_line = current_time + ";" + str(current_temp) + "\n"
 
     if log_file:
         with open(log_file, 'a') as f:
