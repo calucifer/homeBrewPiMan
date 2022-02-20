@@ -1,5 +1,7 @@
-PLUG_CONFIG = {
-    'host': '192.168.9.6',
-    'id': '46011085807d3a6fc88f',
-    'key': '5ff9298cf4ba8f45',
+HOMEASSISTS_CONFIG = {
+    'host': 'homeassistant.local',
+    'port': '8123',
+    'slug': '/api/states/',
+    'sensor': 'sensor.beertemp_sensor',
+    'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIzZjIwZWU1M2JiNDU0YWY1YTRlYmQzMTdkYjRlYmM2OCIsImlhdCI6MTY0MDUyNjU4OSwiZXhwIjoxOTU1ODg2NTg5fQ.UGIxk5Ct6FCMnTxvyql5hpQpFd2RCBBSnG1JITHF5hs'
 }
