@@ -1,7 +1,6 @@
 import sys
 import time
 
-from teckin_plug import manage_plug as plug
 from temperature import checker as temp
 import requests
 import config
